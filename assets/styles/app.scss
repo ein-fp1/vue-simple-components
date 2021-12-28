@@ -1,0 +1,14 @@
+@mixin toRem($property, $value) {
+  #{$property}: ($value / 16) + rem;
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+#__layout {
+  display: flex;
+  justify-content: center;
+  @include toRem(padding, 10);
+}
